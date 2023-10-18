@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Questionnaire QCM</title>
+</head>
+<body>
+    <h1>Questionnaire QCM - Football</h1>
+    
+    <form id="qcmForm">
+        <fieldset>
+            <legend>Question 1 :</legend>
+            <p>Quelle équipe nationale a remporté le plus grand nombre de Coupes du Monde de la FIFA ?</p>
+            <label>
+                <input type="checkbox" name="q1" value="France"> France
+            </label>
+            <label>
+                <input type="checkbox" name="q1a" value="Bresil"> Bresil
+            </label>
+            <label>
+                <input type="checkbox" name="q1b" value="Italie"> Italie
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Question 2 :</legend>
+            <p>Quel joueur a remporté le plus grand nombre de Ballons d'Or ? ?</p>
+            <label>
+                <input type="checkbox" name="q2" value="Messi"> Messi
+            </label>
+            <label>
+                <input type="checkbox" name="q2a" value="Cristiano Ronaldo"> Cristiano Ronaldo
+            </label>
+            <label>
+                <input type="checkbox" name="q2b" value="Platini"> Platini
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Question 3 :</legend>
+            <p>Quelle équipe a remporté le plus grand nombre de Ligue des Champions ?</p>
+            <label>
+                <input type="checkbox" name="q3" value="Bayern Munich"> Bayern Munich
+            </label>
+            <label>
+                <input type="checkbox" name="q3a" value="AC Milan"> AC Milan
+            </label>
+            <label>
+                <input type="checkbox" name="q3b" value="Real Madrid"> Real Madrid
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 4 :</legend>
+            <p>Quelles sont les équipes ayant remportées le plus de Copa America ?</p>
+            <label>
+                <input type="checkbox" name="q4" value="Argentine"> Argentine
+            </label>
+            <label>
+                <input type="checkbox" name="q4a" value="Uruguay"> Uruguay
+            </label>
+            <label>
+                <input type="checkbox" name="q4b" value="Bresil"> Bresil
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 5 :</legend>
+            <p>Qui est le plus grand buteur de la Ligue des Champions ?</p>
+            <label>
+                <input type="checkbox" name="q5" value="Cristiano Ronaldo"> Cristiano Ronaldo
+            </label>
+            <label>
+                <input type="checkbox" name="q5a" value="Messi"> Messi
+            </label>
+            <label>
+                <input type="checkbox" name="q5b" value="Lewandoski"> Lewandoski
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 6 :</legend>
+            <p>Quel est le club de football le plus ancien du monde ?</p>
+            <label>
+                <input type="checkbox" name="q6" value="Real Madrid"> Real Madrid
+            </label>
+            <label>
+                <input type="checkbox" name="q6a" value="Sheffield FC"> Sheffield FC
+            </label>
+            <label>
+                <input type="checkbox" name="q6b" value="Nottingham Forest"> Nottingham Forest
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 7 :</legend>
+            <p>Quel est le montant du transfert de Neymar au PSG ?</p>
+            <label>
+                <input type="checkbox" name="q7" value="50 millions d'euros"> 50 millions d'euros
+            </label>
+            <label>
+                <input type="checkbox" name="q7a" value="343 millions d'euros"> 343 millions d'euros
+            </label>
+            <label>
+                <input type="checkbox" name="q7b" value="222 millions d'euros"> 222 millions d'euros
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 8 :</legend>
+            <p>Quel est le joueur le plus titré de la Ligue 1 ? </p>
+            <label>
+                <input type="checkbox" name="q8" value="Marquinhos"> Marquinhos
+            </label>
+            <label>
+                <input type="checkbox" name="q8a" value="Juninho"> Juninho
+            </label>
+            <label>
+                <input type="checkbox" name="q8b" value="Marco Verratti"> Marco Verratti
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 9 :</legend>
+            <p>Quelle équipe nationale a remporté la Copa America en 2016 ?</p>
+            <label>
+                <input type="checkbox" name="q9" value="Bresil"> Bresil
+            </label>
+            <label>
+                <input type="checkbox" name="q9a" value="Chili"> Chili
+            </label>
+            <label>
+                <input type="checkbox" name="q9b" value="Argentine"> Argentine
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 10 :</legend>
+            <p>Quelle équipe a remporté la Premier League en 2016 ?</p>
+            <label>
+                <input type="checkbox" name="q10" value="Liverpool FC"> Liverpool FC
+            </label>
+            <label>
+                <input type="checkbox" name="q10a" value="Leicester"> Leicester
+            </label>
+            <label>
+                <input type="checkbox" name="q10b" value="Manchester City"> Manchester City
+            </label>
+        </fieldset>
+        
+        <div>
+            <button type="reset">Effacer les sélections</button>
+            <button type="button" onclick="testqcm()">Corriger</button>
+            <button name="corrigev2" type="button" onclick="correctionQCM()">Corrigé</button>
+
+        </div>
+    </form>
+
+    <div id="resultat"></div>
+
+    <script>
+    function correctionQCM() {
+        window.location.href = "correction.html";
+    }
+    </script>
+
+
+    <script>
+        function testqcm() {
+            const formulaire = document.getElementById("qcmForm");
+            const resultat = document.getElementById("resultat");
+            let score = 0;
+
+            if (formulaire.q1a.checked) {
+                score++;
+            }
+            if (formulaire.q2.checked) {
+                score++;
+            }
+            if (formulaire.q3b.checked) {
+                score++;
+            }
+            if (formulaire.q4.checked && formulaire.q4a.checked && !formulaire.q4b.checked) {
+                score++;
+            }
+            if (formulaire.q5.checked) {
+                score++;
+            }
+            if (formulaire.q6a.checked) {
+                score++;
+            }
+            if (formulaire.q7b.checked) {
+                score++;
+            }
+            if (formulaire.q8b.checked) {
+                score++;
+            }
+            if (formulaire.q9a.checked) {
+                score++;
+            }
+            if (formulaire.q10a.checked) {
+                score++;
+            }
+
+            resultat.innerHTML = `Votre score : ${score}/10`;
+        }
+    </script>
+</body>
+</html>

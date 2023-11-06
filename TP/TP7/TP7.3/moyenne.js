@@ -9,16 +9,16 @@ function moyenne()
     var m = ((Number(note1)*Number(coef1)+Number(note2)*Number(coef2)+Number(note3)*Number(coef3))/(Number(coef1)+Number(coef2)+Number(coef3)));
     moy.value = m;
     if (m < 10)
-        resultat.value = "redoublant";
+        resultat.value = "Redoublant";
     else if (m < 12)
-        resultat.value = "admis passable";
+        resultat.value = "Admis passable";
     else if (m < 14)
-        resultat.value = "admis assez bien";
+        resultat.value = "Admis assez bien";
     else if (m < 16)
-        resultat.value = "admis bien";
+        resultat.value = "Admis bien";
     else if (m <= 20)
-        resultat.value = "admis très bien";
+        resultat.value = "Admis très bien";
     else if (m > 20)
-        resultat.value = "erreur";
+        resultat.value = "Une erreur est survenue";
     
 }

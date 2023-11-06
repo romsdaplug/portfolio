@@ -22,7 +22,7 @@ function cdc() {
 }
 
 function swich() {
-    var color = prompt("Entrez une couleur");
+    var color = prompt("Entrez une couleur | 🟢 🔵 🟣 🔴");
     switch (color) {
         case "rouge":
             document.body.style.background = "red";
@@ -42,14 +42,14 @@ function swich() {
         case "BLEU":
             document.body.style.background = "blue";
             break;
-        case "rose":
-            document.body.style.background = "pink";
+        case "violet":
+            document.body.style.background = "purple";
             break;
-	case "Rose":
-            document.body.style.background = "pink";
+	case "Violet":
+            document.body.style.background = "purple";
             break;
-        case "ROSE":
-            document.body.style.background = "pink";
+        case "VIOLET":
+            document.body.style.background = "purple";
             break;
         case "vert":
             document.body.style.background = "green";
@@ -62,7 +62,7 @@ function swich() {
             break;
     
         default:
-            alert("Couleur non prise en charge, veuillez choisir parmis : Bleu, Rose, Rouge et Vert");
+            alert("Couleur non prise en charge, veuillez choisir parmis : Bleu, Violet, Rouge et Vert");
     }
 }
 

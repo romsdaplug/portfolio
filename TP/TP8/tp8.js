@@ -9,3 +9,8 @@ function seconnecter(){
 		alert("Accès refusé")
 	}
 }
+
+
+function seconnecter2(){
+	window.location.href = "https://romsdaplug.github.io/portfolio/TP/TPConnexion/index.html";
+}

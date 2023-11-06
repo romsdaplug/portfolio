@@ -21,7 +21,7 @@ function cdc() {
     document.write("La première lettre est " + chaine.substring(0,1) + "<br>");
 }
 
-function switchh() {
+function swich() {
     var color = prompt("Entrez une couleur");
     switch (color) {
         case "rouge":

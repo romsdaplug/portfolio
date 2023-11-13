@@ -82,3 +82,21 @@ function affichagetab2() {
     }
     document.write("</table>");
 }
+
+function seconnecter3(){
+    var i = 0;
+    do {
+        var id= prompt("Entrez votre nom d'utilisateur");
+        var mdp = prompt("Entrez votre mot de passe");
+        if (id == "admin" && mdp =="admin")
+        {
+            document.write(`Bienvenue ${id}`);
+            break;
+        }
+        else
+        alert("Accès refusé")
+    i +=1;
+    }while (i<3);
+    if (i==3)
+    alert("Delai dépassé");
+    }

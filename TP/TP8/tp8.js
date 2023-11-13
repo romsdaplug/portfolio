@@ -100,3 +100,6 @@ function seconnecter3(){
     if (i==3)
     alert("Delai dépassé");
     }
+
+function ajoutligne(){
+    window.location.href='https://romsdaplug.github.io/portfolio/TP/TP8/ajoutligne.html'

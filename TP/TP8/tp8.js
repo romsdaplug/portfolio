@@ -30,13 +30,13 @@ function swich() {
         case "ROUGE":
             document.body.style.background = "red";
             break;
-	case "Rouge":
+    case "Rouge":
             document.body.style.background = "red";
             break;
         case "bleu":
             document.body.style.background = "blue";
             break;
-	case "Bleu":
+    case "Bleu":
             document.body.style.background = "blue";
             break;
         case "BLEU":
@@ -45,7 +45,7 @@ function swich() {
         case "violet":
             document.body.style.background = "purple";
             break;
-	case "Violet":
+    case "Violet":
             document.body.style.background = "purple";
             break;
         case "VIOLET":
@@ -54,7 +54,7 @@ function swich() {
         case "vert":
             document.body.style.background = "green";
             break;
-	case "Vert":
+    case "Vert":
             document.body.style.background = "green";
             break;
         case "VERT":
@@ -109,24 +109,24 @@ function bonus(){
 
     var testa = ""
     var total = ""
-	var prixttc = 0
+    var prixttc = 0
     
     do{
         var article = prompt("Votre article")
         var price = prompt("Le prix")
         var qty = prompt("La quantité")
 
-        alert(`Vos ${article} vous coûterons ${price * quantity}€`)
-        total = Number(price)*Number(quantity) 
-        prixttc += total 
-        testa += ("Article : " +article+" <br> Prix : "+price +"€"+ " <br> Quantité : "+quantity+ " <br> Total : "+total+"€"+"<br><br><br>")
+        alert(`Vos ${article} vous coûterons ${price * qty}€`)
+        total = Number(price)*Number(qty)
+        prixttc += total
+        testa += ("Article : " +article+" <br> Prix : "+price +"€"+ " <br> Quantité : "+qty+ " <br> Total : "+total+"€"+"<br><br><br>")
         alert('Le coût total de vos articles est de ' + prixttc + "€")
 
-        next = prompt("Voulez-vous ajouter d'autres articles ? (Oui/Non)")
+        next = prompt("Voulez-vous ajouter d'autres articles ? (Oui/Non)");
     }
     while(next != "Non");
     document.write(testa);
-    document.write("Prix TTC : "+testa+"€");
+    document.write("Prix TTC : "+prixttc+"€");
 
 
 }

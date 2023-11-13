@@ -104,3 +104,29 @@ function seconnecter3(){
 function ajoutligne(){
     window.location.href='https://romsdaplug.github.io/portfolio/TP/TP8/ajoutligne.html';
 }
+
+function bonus(){
+
+    var testa = ""
+    var total = ""
+	var prixttc = 0
+    
+    do{
+        var article = prompt("Votre article")
+        var price = prompt("Le prix")
+        var qty = prompt("La quantité")
+
+        alert(`Vos ${article} vous coûterons ${price * quantity}€`)
+        total = Number(price)*Number(quantity) 
+        prixttc += total 
+        testa += ("Article : " +article+" <br> Prix : "+price +"€"+ " <br> Quantité : "+quantity+ " <br> Total : "+total+"€"+"<br><br><br>")
+        alert('Le coût total de vos articles est de ' + prixttc + "€")
+
+        next = prompt("Voulez-vous ajouter d'autres articles ? (Oui/Non)")
+    }
+    while(next != "Non");
+    document.write(testa);
+    document.write("Prix TTC : "+testa+"€");
+
+
+}

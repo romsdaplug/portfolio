@@ -1,16 +1,16 @@
 function seconnecter() {
-    var login = prompt("Donner votre nom d'utilisateur")
-    var mdp = prompt("Donner votre mot de passe")
+    var login = prompt("Donner votre nom d'utilisateur");
+    var mdp = prompt("Donner votre mot de passe");
     if (login == "admin" && mdp == "admin") {
         document.write(`Bienvenue ${login}`);
     }
     else {
-        alert("Accès refusé")
+        alert("Accès refusé");
     }
 }
 
 function seconnecter2() {
-    window.location.href='https://romsdaplug.github.io/portfolio/TP/TPConnexion/index.html'
+    window.location.href='https://romsdaplug.github.io/portfolio/TP/TPConnexion/index.html';
 }
 
 function cdc() {
@@ -94,7 +94,7 @@ function seconnecter3(){
             break;
         }
         else
-        alert("Accès refusé")
+        alert("Accès refusé");
     i +=1;
     }while (i<3);
     if (i==3)
@@ -102,4 +102,5 @@ function seconnecter3(){
     }
 
 function ajoutligne(){
-    window.location.href='https://romsdaplug.github.io/portfolio/TP/TP8/ajoutligne.html'
+    window.location.href='https://romsdaplug.github.io/portfolio/TP/TP8/ajoutligne.html';
+}

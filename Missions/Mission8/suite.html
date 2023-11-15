@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANALYSE DE CHAINE DE CARACTERES</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #search-char {
+            border: 2px solid #000;
+            padding: 8px;
+        }
+
+        #char-input, #string-input, #search-char {
+            width: 40%;
+            padding: 6px;
+            margin: 6px 0;
+            box-sizing: border-box;
+        }
+
+        #btn-validate, #btn-search {
+            background-color: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        hr {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ANALYSE DE CHAINE DE CARACTERES</h1>
+
+    <div>
+        <p>ON RECHERCHE UN CARACTERE DANS UNE CHAINE DE CARACTERES</p>
+        <label for="string-input">Entrer une suite de caractères :</label>
+        <input type="text" id="string-input" class="input-box">
+
+        <label for="char-input"><br>Entrer un caractère :</label>
+        <input type="text" id="char-input" class="input-box">
+        <br>
+
+        <button id="btn-validate" onclick="valider()">Valider</button>
+    </div>
+
+    <hr>
+
+    <div>
+        <p>ON RECHERCHE UNE CHAINE DE CARACTERES DANS UNE AUTRE</p>
+        <label for="search-char">Entrer une chaine de caractères :</label>
+        <input type="text" id="search-char" class="input-box">
+        <br>
+
+        <button id="btn-search" onclick="rechercher()">Rechercher</button>
+    </div>
+</div>
+
+<script>
+    function valider() {
+        var chaine1 = document.getElementById("string-input").value;
+        var caract = document.getElementById("char-input").value;
+
+        if (chaine1.length === 0) {
+            alert("Veuillez entrer au moins un caractère dans la chaîne.");
+            return;
+        }
+
+        if (caract.length !== 1) {
+            alert("Veuillez entrer un seul caractère.");
+            return;
+        }
+
+        alert("Longueur de la chaîne : " + chaine1.length +
+              "\nValeur en majuscule : " + chaine1.toUpperCase() +
+              "\nNombre de fois où on y rencontre le caractère : " + occurrences(chaine1, caract));
+    }
+
+    function occurrences(chaine, caract) {
+        var count = 0;
+        for (var i = 0; i < chaine.length; i++) {
+            if (chaine.charAt(i) === caract) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
+    function rechercher() {
+    var chaine1 = document.getElementById("string-input").value;
+    var chaine2 = document.getElementById("search-char").value;
+
+    if (chaine1.length === 0) {
+        alert("Veuillez entrer au moins un caractère dans la première chaîne.");
+        return;
+    }
+
+    if (chaine2.length < 2) {
+        alert("Veuillez entrer au moins deux caractères dans la deuxième chaîne.");
+        return;
+    }
+
+    var occurrencesCount = countOccurrences(chaine1, chaine2);
+
+    alert("Nombre de fois où l'on rencontre la deuxième chaîne dans la première : " + occurrencesCount);
+}
+
+function countOccurrences(mainString, subString) {
+    var count = 0;
+    var position = 0;
+
+    while ((position = mainString.indexOf(subString, position)) !== -1) {
+        count++;
+        position += subString.length; 
+    }
+
+    return count;
+}
+
+
+</script>
+
+
+</body>
+</html>

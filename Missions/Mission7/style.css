@@ -96,6 +96,10 @@ iframe {
     background-position: center;
 }
 
+.photo img {
+    border-radius: 50%;
+}
+
 footer {
     width: 100%;
     background-color: #333;

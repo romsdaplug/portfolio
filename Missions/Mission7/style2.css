@@ -1,0 +1,59 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e7eff6; /* Un bleu très clair pour le fond */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff; /* Fond blanc pour le contraste */
+  padding: 20px;
+  border-radius: 10px; /* Bords arrondis pour le conteneur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet 3D subtil */
+  text-align: center; /* Centrer le texte dans les boutons */
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #333; /* Couleur du texte pour le titre */
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* Centrer les boutons horizontalement */
+  gap: 10px; /* Espacer les boutons */
+}
+
+button {
+  background-color: #007bff; /* Bleu pour les boutons */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px; /* Bords arrondis pour les boutons */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Transition douce pour l'interaction */
+}
+
+button:hover {
+  background-color: #0056b3; /* Un bleu plus foncé au survol */
+}
+
+/* Responsive design: les boutons deviennent verticaux sur les petits écrans */
+@media (max-width: 500px) {
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    margin-bottom: 10px;
+  }
+}

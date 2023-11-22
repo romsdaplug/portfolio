@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sécurité Web: TLS/SSL</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #0056b3;
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Sécurité Web: TLS/SSL</h1>
+  <p>
+    Le Transport Layer Security (TLS) et son prédécesseur, Secure Sockets Layer (SSL), sont des protocoles cryptographiques conçus pour fournir une communication sécurisée sur un réseau informatique. Communément utilisés sur Internet, ils servent à sécuriser les transactions sur les sites web, les courriels, les messageries instantanées et d'autres transferts de données.
+  </p>
+  <p>
+    TLS/SSL opère entre la couche de transport et la couche d'application du modèle OSI. Ils utilisent une combinaison de cryptographie asymétrique pour l'échange de clés, la cryptographie symétrique pour la confidentialité, et les fonctions de hachage pour l'intégrité. Ces protocoles permettent de vérifier l'identité des parties via des certificats numériques et d'établir un canal sécurisé, empêchant ainsi les attaques de type "homme au milieu".
+  </p>
+  <p>
+    L'implémentation de TLS/SSL dans les navigateurs web permet aux utilisateurs de vérifier la légitimité des sites web grâce aux cadenas verts dans la barre d'adresse, indiquant qu'une connexion sécurisée est établie. Les versions modernes des protocoles, comme TLS 1.3, améliorent la sécurité et les performances, réduisant le temps nécessaire pour établir des connexions sécurisées et éliminant les anciens algorithmes cryptographiques vulnérables.
+  </p>
+  <p>
+    Dans un monde numérique où la confidentialité et la sécurité sont primordiales, TLS/SSL joue un rôle crucial dans la protection des données et la préservation de la confiance dans les communications électroniques.
+  </p>
+
+  <h2>Comprendre SSL/TLS</h1>
+  <p>
+    SSL (Secure Sockets Layer) et TLS (Transport Layer Security) sont les fondements de la sécurité sur Internet. Ils ont été développés pour créer des connexions sécurisées entre les clients web et les serveurs, garantissant ainsi que toutes les données transmises restent privées et intactes. SSL, l'ancêtre de TLS, a été largement adopté après son introduction en 1995. Cependant, en raison de failles de sécurité, il a été remplacé par TLS, qui offre des améliorations significatives en termes de sécurité et d'efficacité.
+  </p>
+  <p>
+    Ces protocoles fonctionnent en établissant une authentification entre le client et le serveur et en négociant un algorithme de cryptage et des clés cryptographiques avant que les données ne soient échangées. L'un des éléments clés de ce processus est l'utilisation de certificats numériques, qui vérifient l'identité des parties impliquées, notamment les sites web et les services en ligne.
+  </p>
+  <p>
+    TLS utilise un processus appelé "handshake" pour établir une connexion sécurisée. Ce handshake commence par un échange d'informations entre le client et le serveur, y compris la version du protocole, les suites cryptographiques disponibles, et la génération d'une clé de session partagée grâce à la cryptographie asymétrique. Une fois le handshake terminé, les données peuvent être échangées à l'aide de la clé de session et de la cryptographie symétrique, ce qui permet une communication rapide et sécurisée.
+  </p>
+  <p>
+    La sécurité renforcée offerte par TLS est essentielle pour des applications comme le commerce électronique, la banque en ligne, et la protection de la confidentialité des communications. Les navigateurs modernes indiquent la présence d'une connexion TLS avec un cadenas fermé dans la barre d'adresse, rassurant ainsi les utilisateurs sur la sécurité de leurs transactions.
+  </p>
+  <p>
+    Les dernières versions de TLS, comme TLS 1.3, ont réduit la complexité et renforcé la sécurité. Elles ont éliminé les suites cryptographiques obsolètes et vulnérables, et ont réduit le nombre de tours dans le handshake, accélérant ainsi le processus de connexion. En raison de l'évolution constante des menaces de sécurité, l'adoption de ces normes est cruciale pour la sécurité des échanges numériques.
+  </p>
+  <p>
+    En conclusion, SSL/TLS sont non seulement des protocoles vitaux pour la sécurité sur Internet, mais ils sont aussi en constante évolution pour contrer les menaces et protéger les données sensibles des utilisateurs. La compréhension et la mise en œuvre correctes de ces protocoles sont donc indispensables pour tout développeur web ou administrateur de système souhaitant garantir la sécurité et la confiance des utilisateurs en ligne.
+  </p>
+</div>
+
+</body>
+</html>
